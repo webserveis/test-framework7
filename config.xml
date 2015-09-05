@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+		xmlns:android = "http://schemas.android.com/apk/res/android"
+        id          = "app.testframework7.test"
+        versionCode = "1" 
+        version     = "1.0.0" >
+
+    <!-- versionCode is optional and Android only -->
+	<icon src="iconapp512.png" />
+	
+    <name>Test Framework7 Material Design</name>
+
+    <description>
+        Test del Framework7 con el tema Material Design
+    </description>
+
+    <author href="http://www.webserveis.com" email="webserveis@gmail.com">
+        Webserveis
+    </author>
+	<!-- plataform build -->
+	<gap:platform name="android" />	
+	
+	<!-- permisions app -->
+	<preference name="permissions" value="none" />
+	<feature name="http://api.phonegap.com/1.0/network" />
+	
+	<!-- Customize your app and platform with the preference element. -->
+	<preference name="orientation" value="default" />
+	<preference name="target-device" value="universal" />
+	<preference name="android-installLocation" value="auto" />
+	
+	<preference name="android-minSdkVersion" value="16" />
+	<preference name="android-targetSdkVersion" value="21" />
+	
+	<access origin="*" onlyInBrowser="true" />
+	
+	<!-- Core plugins -->
+	<gap:plugin name="org.apache.cordova.device" />
+	<gap:plugin name="org.apache.cordova.inappbrowser" />
+	<gap:plugin name="org.apache.cordova.network-information" />
+	<gap:plugin name="org.apache.cordova.dialogs" />
+	<gap:plugin name="org.apache.cordova.globalization" />
+	
+	<!-- Plugins -->
+	<gap:plugin name="nl.x-services.plugins.socialsharing" />
+	<gap:plugin name="com.hutchind.cordova.plugins.launcher" />
+	
+	<gap:plugin name="nl.x-services.plugins.toast" />
+	<gap:plugin name="com.verso.cordova.clipboard" source="plugins.cordova.io" />
+	
+	<gap:plugin name="org.apache.cordova.statusbar" version="0.1.4" />
+	<preference name="StatusBarBackgroundColor" value="#ECF0F1" />
+	<gap:plugin name="hu.dpal.phonegap.plugins.spinnerdialog" />
+	<gap:plugin name="com.sharinglabs.cordova.plugin.cache" version="1.0.0" />
+	
+	
+	<!-- Customize android manifest.xml -->
+    <gap:config-file platform="android" parent="/manifest">
+        <supports-screens 
+            android:xlargeScreens="true" 
+            android:largeScreens="true" 
+            android:smallScreens="true" />
+        <application android:theme="@android:style/Theme.NoTitleBar" >
+            <activity android:theme="@android:style/Theme.NoTitleBar" >
+            </activity>
+        </application>
+    </gap:config-file>	
+	
+</widget>
